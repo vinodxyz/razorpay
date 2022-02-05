@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment buttons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="btns-area" style="background-color: #002674">
+        <div class="btns-label">Paypal button</div>
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="2XG9JHKEM3DKY">
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="business" value="hi.vinodxyz@gmail.com">
+            <input type="hidden" name="display" value="1">
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    
+    <div class="btns-area" style="background-color: #002e25">
+        <div class="btns-label">Shopify button</div>
+        <div id='product-component-1644053281114'></div>
+    </div>    
+
+    <div class="btns-area" style="background-color: #148bec;">
+        <div class="btns-label">Razorpay button</div>
+        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IbhaFyCg1ilgz5" async> </script> </form>
+    </div>
+    
+</body>  
+
+    
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'tw-test-20210318-01.myshopify.com',
+      storefrontAccessToken: '3883dedb9c2af761740ae03f188331c6',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '7046844022964',
+        node: document.getElementById('product-component-1644053281114'),
+        moneyFormat: 'Rs.%20%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        "color": "#000000",
+        ":hover": {
+          "color": "#000000",
+          "background-color": "#e6bc11"
+        },
+        "background-color": "#ffd113",
+        ":focus": {
+          "background-color": "#e6bc11"
+        },
+        "border-radius": "17px",
+        "padding-left": "64px",
+        "padding-right": "64px"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    },
+    "googleFonts": [
+      "Droid Sans"
+    ]
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        "color": "#000000",
+        ":hover": {
+          "color": "#000000",
+          "background-color": "#e6bc11"
+        },
+        "background-color": "#ffd113",
+        ":focus": {
+          "background-color": "#e6bc11"
+        },
+        "border-radius": "17px",
+        "padding-left": "64px",
+        "padding-right": "64px"
+      }
+    },
+    "googleFonts": [
+      "Droid Sans"
+    ],
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        "color": "#000000",
+        ":hover": {
+          "color": "#000000",
+          "background-color": "#e6bc11"
+        },
+        "background-color": "#ffd113",
+        ":focus": {
+          "background-color": "#e6bc11"
+        },
+        "border-radius": "17px"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    },
+    "googleFonts": [
+      "Droid Sans"
+    ]
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        "background-color": "#ffd113",
+        ":hover": {
+          "background-color": "#e6bc11"
+        },
+        ":focus": {
+          "background-color": "#e6bc11"
+        }
+      },
+      "count": {
+        "color": "#000000",
+        ":hover": {
+          "color": "#000000"
+        }
+      },
+      "iconPath": {
+        "fill": "#000000"
+      }
+    },
+    "googleFonts": [
+      "Droid Sans"
+    ]
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+
+<style>
+    .btns-area{
+        border-radius: 10px;
+        position: relative;
+        padding: 24px;
+        margin: 24px;
+    }
+
+    body{
+        background-color: #ffffff;
+    }
+
+    .btns-label{
+        color: white;
+        font-family: 'Mulish', sans-serif;
+        font-size: 24px;
+        padding: 16px;
+    }
+</style>            
+
+
+
+</html>
